@@ -1,0 +1,12 @@
+<testsuite errors="0" failures="0" name="features.feature1.anotherfeature.Now executing Feature1" skipped="0" tests="1" time="0.000199"><testcase classname="features.feature1.anotherfeature.Now executing Feature1" name="second scenario" status="passed" time="0.000199"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: second scenario
+    Given this is simple ... passed in 0.000s
+    When this is not simple ... passed in 0.000s
+    Then this is complex ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

@@ -1,0 +1,16 @@
+Feature: This feature verifies the status of Channel Worker.
+
+  Scenario Outline: Verify State of channel worker -- @1.1 states mapping
+    Given Channel is worker1 ... passed in 0.000s
+    And Channel POST  v1/admin/start ... passed in 0.000s
+    When Get status "v1/admin/status" ... passed in 0.000s
+    Then Status code should be 200 ... passed in 0.000s
+    And Channel state should be Operational ... passed in 0.000s
+
+  Scenario Outline: Verify State of channel worker -- @1.2 states mapping
+    Given Channel is worker2 ... passed in 0.000s
+    And Channel POST  v1/admin/stop ... passed in 0.000s
+    When Get status "v1/admin/status" ... passed in 0.000s
+    Then Status code should be 200 ... passed in 0.000s
+    And Channel state should be Idle ... passed in 0.000s
+

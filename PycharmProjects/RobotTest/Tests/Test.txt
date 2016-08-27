@@ -1,0 +1,13 @@
+*** Settings ***
+Library     Sample/__init__.py
+
+
+*** Keywords ***
+Compare firstname
+    Arguments   ${Firstname}
+    match firstname ${Firstname}
+
+
+*** Test Cases ***
+Verify Name
+    Compare firstname   NotAnurag

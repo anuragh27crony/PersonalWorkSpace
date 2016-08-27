@@ -1,0 +1,12 @@
+<testsuite errors="0" failures="0" name="features.feature2.sampleFeature.Now executing Feature 2_2" skipped="0" tests="1" time="0.000162"><testcase classname="features.feature2.sampleFeature.Now executing Feature 2_2" name="This is main Scenario" status="passed" time="0.000162"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: This is main Scenario
+    Given This is a condition ... passed in 0.000s
+    When This is a precondition ... passed in 0.000s
+    Then This is finalResult ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
