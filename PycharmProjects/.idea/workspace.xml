@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="770ea61f-c3a7-4ccf-8265-270d1bd5b774" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RobotTest/TestFile.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../IdeaProjects/BasicProject" afterPath="$PROJECT_DIR$/../IdeaProjects/BasicProject" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../IdeaProjects/interviewprep" afterPath="$PROJECT_DIR$/../IdeaProjects/interviewprep" />
     </list>
