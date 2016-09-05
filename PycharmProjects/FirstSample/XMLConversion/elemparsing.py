@@ -1,28 +1,7 @@
 import xml.etree.ElementTree as ET
-import time
-
-from FirstSample.XMLConversion.Components import Feature,Story,TestCase,Step
-
-
-def _init():
-    start = time.time()
-    tree = ET.parse('XMLFiles/2016-09-01_161608_output_4.3_Rerun.xml')
-    root = tree.getroot()
-    for suites in root.iter('suite'):
-        print(suites.tag, suites.attrib)
-        for tests in suites.iter('test'):
-            print("\t", tests.tag, tests.attrib)
-    end = time.time()
-    print(end - start)
-
+from FirstSample.XMLConversion.Components import Feature, Story, TestCase, Step
 
 feature_list = []
-
-
-def _process_keyword(suite_elem):
-    for elem in suite_elem.iter():
-        if elem.tag == 'test':
-            print(elem.tag, elem.attrib)
 
 
 def _another():
@@ -53,17 +32,3 @@ def _prepare_step(keyword_elem):
 
 
 _another()
-
-# test=TestCase("First Test")
-# test.add_step("step 1")
-# test.add_step("step 2")
-# test.add_step("step 3")
-# print(test)
-#
-# story1=Story("First Sotry")
-# story1.add_test_case(test)
-#
-# feature=Feature("First Feature")
-# feature.add_story(story1)
-#
-# print(feature)
