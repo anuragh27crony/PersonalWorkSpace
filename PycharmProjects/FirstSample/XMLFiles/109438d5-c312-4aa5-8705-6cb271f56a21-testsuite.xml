@@ -1,0 +1,60 @@
+<ns0:test-suite start="1473066192492" stop="1473066192828" xmlns:ns0="urn:model.allure.qatools.yandex.ru">
+  <name>Verify API version  of channel worker</name>
+  <test-cases>
+    <test-case start="1473066192492" status="failed" stop="1473066192828">
+      <description>[]</description>
+      <name>Verify ChannelWorker api version</name>
+      <failure>
+        <message>Exception Gist</message>
+        <stack-trace>Traceback (most recent call last):
+  File &quot;C:\Python27\lib\site-packages\behave\model.py&quot;, line 1456, in run
+    match.run(runner.context)
+  File &quot;C:\Python27\lib\site-packages\behave\model.py&quot;, line 1903, in run
+    self.func(context, *args, **kwargs)
+  File &quot;ApiDemo\steps\WorkerVersion.py&quot;, line 7, in fetch_api_version
+    context.response=context.worker_api_lib.get_api_version()
+  File &quot;D:\GitRepos\BehaveDemoProject\Utilities\API\APILib.py&quot;, line 41, in get_api_version
+    timeout=self.timeout)
+  File &quot;D:\GitRepos\BehaveDemoProject\Utilities\API\HttpUtil.py&quot;, line 21, in prepare_send_request
+    httpResponse = self._send_request(session_obj, httpRequest)
+  File &quot;D:\GitRepos\BehaveDemoProject\Utilities\API\HttpUtil.py&quot;, line 15, in _send_request
+    httpPreparedRequest = httpSession.prepare_request(httprequest)
+  File &quot;C:\Python27\lib\site-packages\requests\sessions.py&quot;, line 385, in prepare_request
+    method=request.method.upper(),
+AttributeError: 'HttpMethod' object has no attribute 'upper'
+</stack-trace>
+      </failure>
+      <labels>
+        <label name="feature" value="Verify API version  of channel worker"/>
+        <label name="story" value="Verify ChannelWorker api version"/>
+      </labels>
+      <attachments>
+        <attachment source="1854c3d5-1ae5-4b01-b370-ee03dd09e954-attachment.txt" title="error_log" type="text/plain"/>
+      </attachments>
+      <steps>
+        <step start="1473066192495" status="None" stop="1473066192496">
+          <title>Channel worker is worker1</title>
+          <name>Channel worker is worker1</name>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1473066192497" status="None" stop="1473066192497">
+          <title>Start Channel worker</title>
+          <name>Start Channel worker</name>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1473066192498" status="None" stop="1473066192826">
+          <title>Get channel worker version</title>
+          <name>Get channel worker version</name>
+          <attachments>
+            <attachment source="a2523346-ce6a-4629-b88d-51b5ec04fffb-attachment.txt" title="stackTrace" type="text/plain"/>
+            <attachment source="c9cc30f4-6bcd-4d3f-8019-4517f241e1bd-attachment.png" title="screenshot" type="image/png"/>
+          </attachments>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+  <labels/>
+</ns0:test-suite>
