@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-from FirstSample.XMLConversion.Components import Feature, Story, TestCase, Step
+from XMLConversion.Components import Feature, Story, TestCase, Step
 
 feature_list = []
 
