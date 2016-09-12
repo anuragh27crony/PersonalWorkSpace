@@ -26,16 +26,5 @@ public class FeatureTest {
         driver.validateResults();
 
     }
-//
-//
-//    @Test(expectedExceptions = ArithmeticException.class)
-//    public void dividebyZero(){
-//        int var= 100/0;
-//    }
-//
-//    @Test()
-//    public void checkdifference(){
-//        Assert.assertEquals(0,(12-13));
-//    }
 
 }

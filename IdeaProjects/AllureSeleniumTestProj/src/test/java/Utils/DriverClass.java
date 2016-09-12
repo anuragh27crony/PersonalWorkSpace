@@ -2,7 +2,6 @@ package Utils;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -23,8 +22,16 @@ public class DriverClass {
         DesiredCapabilities capabilities=DesiredCapabilities.firefox();
         capabilities.setCapability("marionette",true);
 
-        driverInstance=new FirefoxDriver(capabilities);
-        this.captureScreenshot();
+        EventFiringWebDriver eventDriver = new EventFiringWebDriver(new FirefoxDriver(capabilities));
+        WebDriverEventListener errorListener = new AbstractWebDriverEventListener() {
+            @Override
+            public void onException(Throwable throwable, WebDriver driver) {
+                takeScreenshot();
+            }
+        };
+        eventDriver.register(errorListener);
+        driverInstance=eventDriver;
+
     }
 
     @Step("Navigate to Homepage")
@@ -45,20 +52,8 @@ public class DriverClass {
     }
 
 
-
-    private void captureScreenshot() {
-        if(driverInstance != null) {
-            EventFiringWebDriver driver = new EventFiringWebDriver(driverInstance);
-            WebDriverEventListener errorListener = new AbstractWebDriverEventListener() {
-                @Override
-                public void onException(Throwable throwable, WebDriver driver) {
-                    takeScreenshot();
-                }
-            };
-            driver.register(errorListener);
-        }
-    }
-
+//    This Annotation does all the work from saving screenshot
+//    till attaching it to report
     @Attachment
     public byte[] takeScreenshot(){
         return ((TakesScreenshot)driverInstance).getScreenshotAs(OutputType.BYTES);
