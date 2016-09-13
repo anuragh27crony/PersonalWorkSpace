@@ -19,7 +19,9 @@ public class FeatureTest {
 
     @Test
     public void testSearchResults(){
+        System.out.println("Test: Before Navigating ");
         driver.openHomepage();
+        System.out.println("Test: After Navigating ");
         driver.searchKeyword("Testing is fun");
 
         //This step fails since we are searching non exisiting element

@@ -18,12 +18,15 @@ public class DriverClass {
     private WebDriver driverInstance;
 
     public DriverClass(){
-        System.setProperty("webdriver.gecko.driver","/Applications/Firefox.app/Contents/MacOS/firefox");
+        String marionetteDriverLocation = System.getProperty("user.dir") + "/geckodriver/geckodriver-win.exe";
+        System.setProperty("webdriver.gecko.driver",marionetteDriverLocation);
+
         DesiredCapabilities capabilities=DesiredCapabilities.firefox();
         capabilities.setCapability("marionette",true);
 
         EventFiringWebDriver eventDriver = new EventFiringWebDriver(new FirefoxDriver(capabilities));
         WebDriverEventListener errorListener = new AbstractWebDriverEventListener() {
+
             @Override
             public void onException(Throwable throwable, WebDriver driver) {
                 takeScreenshot();
@@ -32,16 +35,17 @@ public class DriverClass {
         eventDriver.register(errorListener);
         driverInstance=eventDriver;
 
+
     }
 
     @Step("Navigate to Homepage")
     public void openHomepage(){
-        driverInstance.get("http://WWW.Google.com");
+        driverInstance.get("http://www.google.com");
     }
 
     @Step("Search  \\\"{0}\\\" in Homepage")
     public void searchKeyword(String searchText){
-        WebElement searchElement=driverInstance.findElement(By.id("q"));
+        WebElement searchElement=driverInstance.findElement(By.name("q"));
         searchElement.sendKeys(searchText);
         searchElement.sendKeys(Keys.ENTER);
     }
@@ -58,4 +62,5 @@ public class DriverClass {
     public byte[] takeScreenshot(){
         return ((TakesScreenshot)driverInstance).getScreenshotAs(OutputType.BYTES);
     }
+
 }
