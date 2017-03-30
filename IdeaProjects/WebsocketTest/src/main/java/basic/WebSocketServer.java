@@ -1,3 +1,5 @@
+package basic;
+
 import io.undertow.Undertow;
 import io.undertow.server.handlers.PathHandler;
 import io.undertow.websockets.WebSocketConnectionCallback;
@@ -8,17 +10,22 @@ import io.undertow.websockets.spi.WebSocketHttpExchange;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+import java.io.File;
+
 import static io.undertow.Handlers.path;
 import static io.undertow.Handlers.websocket;
 
 public class WebSocketServer {
     private static final Logger LOGGER = LogManager.getLogger(WebSocketServer.class);
     private Undertow server;
-    String lastReceivedMessage;
+    private String lastReceivedMessage;
 
     public static void main(final String[] args) {
-        WebSocketServer webSocketServer = new WebSocketServer();
-        webSocketServer.buildAndStartServer(8080, "localhost");
+//        WebSocketServer webSocketServer = new WebSocketServer();
+//        webSocketServer.buildAndStartServer(8080, "localhost");
+
+
+
     }
 
     public void buildAndStartServer(int port, String host) {
@@ -50,5 +57,13 @@ public class WebSocketServer {
                 channel.resumeReceives();
             }
         }));
+    }
+
+    public String getLastReceivedMessage() {
+        return lastReceivedMessage;
+    }
+
+    public void setLastReceivedMessage(String lastReceivedMessage) {
+        this.lastReceivedMessage = lastReceivedMessage;
     }
 }

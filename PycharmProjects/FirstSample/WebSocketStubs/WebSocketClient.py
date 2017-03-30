@@ -1,3 +1,5 @@
+from Queue import Queue
+
 from autobahn.twisted.websocket import WebSocketClientProtocol, \
     WebSocketClientFactory
 
@@ -6,13 +8,17 @@ class MyClientProtocol(WebSocketClientProtocol):
     def onConnect(self, response):
         print("Server connected: {0}".format(response.peer))
 
+    def onPong(self, payload):
+        pass;
     def onOpen(self):
         print("WebSocket connection open.")
 
         def hello():
+            q = Queue()
+            q.put("Testing is fun")
             self.sendMessage(u"Hello, world!".encode('utf8'))
-            self.sendMessage(b"\x00\x01\x03\x04", isBinary=True)
-            self.factory.reactor.callLater(1, hello)
+            # self.sendMessage(b"\x00\x01\x03\x04", isBinary=True)
+            # self.factory.reactor.callLater(1, hello)
 
         # start sending messages every second ..
         hello()
@@ -40,3 +46,12 @@ if __name__ == '__main__':
 
     reactor.connectTCP("127.0.0.1", 9000, factory)
     reactor.run()
+
+
+
+factory = WebSocketServerFactory(u"ws://127.0.0.1:9000")
+factory.protocol = ServerProtocol
+# factory.setProtocolOptions(maxConnections=2)
+
+# note to self: if using putChild, the child must be bytes...
+
