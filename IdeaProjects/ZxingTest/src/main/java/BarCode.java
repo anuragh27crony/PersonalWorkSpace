@@ -1,3 +1,5 @@
+import org.apache.log4j.Logger;
+
 import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -8,6 +10,9 @@ import java.util.Arrays;
  * Created by amala on 27-03-2017.
  */
 public class BarCode {
+    private final static Logger logger = Logger.getLogger(BarCode.class);
+    public static String logFileName = "";
+
     public static void main(String[] args) {
 
 
@@ -39,9 +44,11 @@ public class BarCode {
         ArrayList<String> videoFiles = new ArrayList<String>(Arrays.asList(f.list()));
 
         for (String videoFile : videoFiles) {
+            logFileName = videoFile;
+            logger.info(">>>>>>>>>>>>>>>>>>>>> " + videoFile.toUpperCase() + " >>>>>>>>>>>>>>>>>>>>>");
             String videoFilePath = Paths.get(recorderVideosPath, videoFile).toString();
             String extractedFramesDir = videoUtils.extractFramesFromVideo(resourcesPath, videoFilePath, videoFile.substring(0, videoFile.length() - 4));
-            videoUtils.analyzeExtractedFrames(1, 1800, extractedFramesDir, "img_", ".jpg");
+            videoUtils.analyzeExtractedFrames(1, 1800, extractedFramesDir, "img_", ".png");
         }
     }
 
