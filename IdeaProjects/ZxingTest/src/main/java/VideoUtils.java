@@ -1,7 +1,8 @@
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.WriterException;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,7 +15,7 @@ import java.nio.file.Paths;
  * Created by amala on 30-03-2017.
  */
 public class VideoUtils {
-    private final static Logger logger = Logger.getLogger(VideoUtils.class);
+    private final static Logger logger = LoggerFactory.getLogger(VideoUtils.class);
 
 
     public void watchProcess(Process process) {
@@ -24,11 +25,10 @@ public class VideoUtils {
                 String line = null;
                 try {
                     while ((line = input.readLine()) != null) {
-                        logger.info(line);
-//                    System.out.println(line);
+                        logger.trace(line);
                     }
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    logger.error(e.getMessage(), e);
                 }
             }
         };
@@ -36,32 +36,29 @@ public class VideoUtils {
         try {
             t.join();
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage(), e);
         }
     }
 
 
-    public String extractFramesFromVideo(Path resourcesPath, String sourceVideoPath, String videoFileName) {
+    public String extractFramesFromVideo(Path resourcesPath, String sourceVideoPath, String videoFileName, String frameFilePrefix, String frameFileExt) {
 
 
         String destinationFolder = Paths.get(resourcesPath.toString(), "Frames", videoFileName).toString();
 
         File destinationDir = new File(destinationFolder);
         if (!destinationDir.exists())
-            System.out.println(destinationDir.mkdirs());
+            logger.info(destinationDir.getAbsolutePath() + " is Created :" + destinationDir.mkdirs());
 
-        String imgDirPath = Paths.get(destinationFolder, "img_%d.png").toString();
-        String command = "cmd /c ffmpeg -i " + sourceVideoPath + " " + imgDirPath;
-        ProcessBuilder builder = new ProcessBuilder("cmd", "/c", "ffmpeg", "-i", sourceVideoPath, imgDirPath);
+        String frameFilePath = Paths.get(destinationFolder, frameFilePrefix + "%d" + frameFileExt).toString();
+        ProcessBuilder builder = new ProcessBuilder("cmd", "/c", "ffmpeg", "-i", sourceVideoPath, frameFilePath);
         builder.redirectErrorStream(true);
 
         try {
             final Process process = builder.start();
             watchProcess(process);
-        } catch (IllegalStateException e) {
-            logger.fatal(e.getMessage(), e);
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IllegalStateException | IOException e) {
+            logger.error(e.getMessage(), e);
         }
         return destinationFolder;
     }
@@ -91,7 +88,7 @@ public class VideoUtils {
                 }
                 previousCounter = currentCounter;
             } catch (IOException | NotFoundException | NumberFormatException | ArrayIndexOutOfBoundsException e) {
-                logger.fatal(e.getMessage(), e);
+                logger.error(e.getMessage(), e);
             }
             startSequence++;
         }
@@ -109,7 +106,7 @@ public class VideoUtils {
             try {
                 barCodeWriter.createBarCode(dataContents, BarcodeFormat.UPC_A, filePath, imgExt, height, width);
             } catch (WriterException | IOException e) {
-                logger.fatal(e.getMessage(), e);
+                logger.error(e.getMessage(), e);
             }
             startSeqeunce++;
         }
