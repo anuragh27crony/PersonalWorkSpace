@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by amala on 30-03-2017.
  */
-public class WriteBarCode {
+public class BarCodeWriter {
     public void createBarCode(String contents, BarcodeFormat barcodeFormat, String filePath, String fileFormat, int height, int width)
             throws WriterException, IOException {
         String encodedContent = new String(contents.getBytes("UTF-8"), "UTF-8");

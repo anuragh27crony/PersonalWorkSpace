@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * Created by amala on 30-03-2017.
  */
-public class ReadBarCode {
+public class BarCodeReader {
     public String readBarCode(String filePath) throws IOException, NotFoundException, ArrayIndexOutOfBoundsException {
 
         Map<DecodeHintType, Object> hintsMap = new EnumMap<DecodeHintType, Object>(DecodeHintType.class);
