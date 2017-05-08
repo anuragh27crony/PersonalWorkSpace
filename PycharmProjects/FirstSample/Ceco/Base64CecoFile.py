@@ -1,71 +1,126 @@
-import requests
-import json
+import csv
+import os
 import base64
+import FpsNext
+import json
 
-from operator import itemgetter
-
-
-def encode_ceco(ceco_file_path=None, encoded_file_output=None):
-    with open(ceco_file_path, "rb") as ceco_file:
-        encoded_string = base64.b64encode(ceco_file.read())
-
-    if encoded_file_output is not None:
-        with open(encoded_file_output, "w") as write_file:
-            write_file.write(encoded_string)
-
-    return encoded_string
+from dateutil import parser
 
 
-encode_ceco(ceco_file_path="D:\\CecoComparision\\4.4(28-Apr-08Hr)\\WcD0D001704280600_01.ce",
-            encoded_file_output="D:\\CecoComparision\\4.4(28-Apr-08Hr)\\base64\\Base641704280600_01.txt")
+class AnalyzeCeco:
+    def __init__(self):
+        self.ref_ceco_dir = "D:\CecoComparision\\4.3\\20170505\\00"
+        self.candidate_ceco_dir = "D:\CecoComparision\\4.4\\20170505\\00"
+        self.fpsnext = FpsNext.FpsNext()
+
+    def create_ceco_base64_str(self, ceco_file_path=None, encoded_file_output=None):
+        with open(ceco_file_path, "rb") as ceco_file:
+            encoded_string = base64.b64encode(ceco_file.read())
+
+        if encoded_file_output is not None:
+            with open(encoded_file_output, "w") as write_file:
+                write_file.write(encoded_string)
+        return encoded_string
+
+    def map_matching_zones(self, start_time, end_time, ce_elements):
+        matching_ce_elements = list()
+
+        for ce in ce_elements:
+            ce_start_time = parser.parse(ce.get("start"))
+            ce_end_time = parser.parse(ce.get("end"))
+            ref_start_time = parser.parse(start_time)
+
+            ref_end_time = parser.parse(end_time)
+            if (ref_start_time <= ce_start_time) & (ref_start_time <= ce_end_time):
+                if (ref_end_time >= ce_start_time) & (ref_end_time >= ce_end_time):
+                    matching_ce_elements.append(ce.get("id"))
+
+        return matching_ce_elements
+
+    def missing_zones(self, ce_elements, results):
+        zones = set()
+        is_empty = True
+
+        for ce in ce_elements:
+            zones.add(ce.get("id"))
+
+        if len(zones) > 0:
+            is_empty = False
+
+        for matching_block in results:
+            zones.difference_update(set(matching_block.get("matchingZones")))
+
+        if is_empty:
+            print("Zones missing in Ceco")
+
+        return zones
+
+    def analyze_search_result(self, search_analysis_result=None):
+        counter = 1
+        ce_elements = search_analysis_result.get("data").get("analysis").get("streams")[0].get("channels")[0].get(
+            "contentElements")
+        for ce in ce_elements:
+            ce.update({"id": counter})
+            counter += 1
+        for result in search_analysis_result.get("data").get("results"):
+            matching_ce_zones = self.map_matching_zones(result.get("candidateStartUtc"), result.get("candidateEndUtc"),
+                                                        ce_elements)
+            result.update({"matchingZones": matching_ce_zones})
+        final_result = search_analysis_result.get("data").get("results")
+        missing_zones = self.missing_zones(ce_elements, final_result)
+        return missing_zones, final_result
+
+    def ingest_ref_ceco(self, ceco_file_name=None, feed_id=None, meta_data=None):
+
+        if ceco_file_name is not None:
+            ref_ceco_file_path = os.path.join(self.ref_ceco_dir, ceco_file_name)
+            if feed_id is None:
+                feed_id = ceco_file_name[7:17]
+            base64_ceco_str = self.create_ceco_base64_str(ceco_file_path=ref_ceco_file_path)
+
+            self.fpsnext.define_feed(feed_id=feed_id, request_meta_data=meta_data)
+            self.fpsnext.ingest_feed(feed_id=feed_id, ceco_data=base64_ceco_str)
+
+    def analyze_candidate_ceco(self, ceco_file_name=None):
+        # candidate_detec_id = candidate_ceco_file[3:7]
+        missing_zones = None
+        result = None
+        if ceco_file_name is not None:
+            candidate_ceco_file_path = os.path.join(self.candidate_ceco_dir, ceco_file_name)
+            base64_ceco_str = self.create_ceco_base64_str(ceco_file_path=candidate_ceco_file_path)
+
+            search_result = self.fpsnext.identify_feed(ceco_data=base64_ceco_str)
+            (missing_zones, result) = self.analyze_search_result(search_result)
+
+        return missing_zones, json.dumps(result)
+
+    def clean_existing_feeds(self):
+        available_feeds_result = self.fpsnext.list_feeds()
+
+        if available_feeds_result.get("success"):
+            for feed in available_feeds_result.get("data"):
+                self.fpsnext.delete_feed(feed.get("feedID"))
 
 
-def read_fps_identify_results(json_string):
-    json_obj = json.loads(json_string)
-    sorted(json_obj.get('results'), key=itemgetter('candidateStartOffset'))
-
-    print(json.dumps(json_obj))
-    return json.dumps(json_obj)
+def write_results(data):
+    cw = csv.writer(open("D:\\result.csv", 'a+'))
+    cw.writerow(list(data))
 
 
-read_fps_identify_results(
-    json_string="{ \"results\": [ { \"id\": \"2016042806\", \"metadata\": \"4.32016042806\", \"candidateStartOffset\": 0, \"candidateEndOffset\": 51201, \"candidateStartUtc\": \"2017-04-28T05:59:43.422Z\", \"candidateEndUtc\": \"2017-04-28T06:00:34.623Z\", \"referenceStartUtc\": \"2017-04-28T06:10:01.340Z\", \"referenceEndUtc\": \"2017-04-28T06:10:52.540Z\", \"referenceNextUtc\": \"2017-04-28T06:29:43.667Z\", \"type\": \"feed\", \"berAverage\": 0.0893128357975525, \"transform\": \"none\" }, { \"id\": \"2016042806\", \"metadata\": \"4.32016042806\", \"candidateStartOffset\": 0, \"candidateEndOffset\": 121019, \"candidateStartUtc\": \"2017-04-28T05:59:43.422Z\", \"candidateEndUtc\": \"2017-04-28T06:01:44.441Z\", \"referenceStartUtc\": \"2017-04-28T05:59:43.358Z\", \"referenceEndUtc\": \"2017-04-28T06:01:44.376Z\", \"referenceNextUtc\": \"2017-04-28T06:29:43.667Z\", \"type\": \"feed\", \"berAverage\": 0.09266226293421038, \"transform\": \"none\" }, { \"id\": \"2016042806\", \"metadata\": \"4.32016042806\", \"candidateStartOffset\": 232728, \"candidateEndOffset\": 269964, \"candidateStartUtc\": \"2017-04-28T06:03:36.150Z\", \"candidateEndUtc\": \"2017-04-28T06:04:13.386Z\", \"referenceStartUtc\": \"2017-04-28T06:13:54.067Z\", \"referenceEndUtc\": \"2017-04-28T06:14:31.303Z\", \"referenceNextUtc\": \"2017-04-28T06:29:43.667Z\", \"type\": \"feed\", \"berAverage\": 0.10375993330128454, \"transform\": \"none\" }, { \"id\": \"2016042806\", \"metadata\": \"4.32016042806\", \"candidateStartOffset\": 274618, \"candidateEndOffset\": 279273, \"candidateStartUtc\": \"2017-04-28T06:04:18.040Z\", \"candidateEndUtc\": \"2017-04-28T06:04:22.695Z\", \"referenceStartUtc\": \"2017-04-28T06:14:35.958Z\", \"referenceEndUtc\": \"2017-04-28T06:14:40.613Z\", \"referenceNextUtc\": \"2017-04-28T06:29:43.667Z\", \"type\": \"feed\", \"berAverage\": 0.109375, \"transform\": \"none\" }, { \"id\": \"2016042806\", \"metadata\": \"4.32016042806\", \"candidateStartOffset\": 744727, \"candidateEndOffset\": 884363, \"candidateStartUtc\": \"2017-04-28T06:12:08.149Z\", \"candidateEndUtc\": \"2017-04-28T06:14:27.785Z\", \"referenceStartUtc\": \"2017-04-28T06:12:08.085Z\", \"referenceEndUtc\": \"2017-04-28T06:14:27.722Z\", \"referenceNextUtc\": \"2017-04-28T06:29:43.667Z\", \"type\": \"feed\", \"berAverage\": 0.12008272469926444, \"transform\": \"none\" }, { \"id\": \"2016042806\", \"metadata\": \"4.32016042806\", \"candidateStartOffset\": 274618, \"candidateEndOffset\": 740072, \"candidateStartUtc\": \"2017-04-28T06:04:18.040Z\", \"candidateEndUtc\": \"2017-04-28T06:12:03.494Z\", \"referenceStartUtc\": \"2017-04-28T06:04:17.976Z\", \"referenceEndUtc\": \"2017-04-28T06:12:03.431Z\", \"referenceNextUtc\": \"2017-04-28T06:29:43.667Z\", \"type\": \"feed\", \"berAverage\": 0.12124900333248387, \"transform\": \"none\" }, { \"id\": \"2016042806\", \"metadata\": \"4.32016042806\", \"candidateStartOffset\": 130328, \"candidateEndOffset\": 269964, \"candidateStartUtc\": \"2017-04-28T06:01:53.750Z\", \"candidateEndUtc\": \"2017-04-28T06:04:13.386Z\", \"referenceStartUtc\": \"2017-04-28T06:01:53.685Z\", \"referenceEndUtc\": \"2017-04-28T06:04:13.322Z\", \"referenceNextUtc\": \"2017-04-28T06:29:43.667Z\", \"type\": \"feed\", \"berAverage\": 0.12485432834376162, \"transform\": \"none\" }, { \"id\": \"2016042806\", \"metadata\": \"4.32016042806\", \"candidateStartOffset\": 851781, \"candidateEndOffset\": 884363, \"candidateStartUtc\": \"2017-04-28T06:13:55.203Z\", \"candidateEndUtc\": \"2017-04-28T06:14:27.785Z\", \"referenceStartUtc\": \"2017-04-28T06:24:13.067Z\", \"referenceEndUtc\": \"2017-04-28T06:24:45.631Z\", \"referenceNextUtc\": \"2017-04-28T06:29:43.667Z\", \"type\": \"feed\", \"berAverage\": 0.1291846584868902, \"transform\": \"none\" }, { \"id\": \"2016042806\", \"metadata\": \"4.32016042806\", \"candidateStartOffset\": 274618, \"candidateEndOffset\": 279273, \"candidateStartUtc\": \"2017-04-28T06:04:18.040Z\", \"candidateEndUtc\": \"2017-04-28T06:04:22.695Z\", \"referenceStartUtc\": \"2017-04-28T06:24:53.885Z\", \"referenceEndUtc\": \"2017-04-28T06:24:58.540Z\", \"referenceNextUtc\": \"2017-04-28T06:29:43.667Z\", \"type\": \"feed\", \"berAverage\": 0.129395, \"transform\": \"none\" }, { \"id\": \"2016042806\", \"metadata\": \"4.32016042806\", \"candidateStartOffset\": 232728, \"candidateEndOffset\": 269964, \"candidateStartUtc\": \"2017-04-28T06:03:36.150Z\", \"candidateEndUtc\": \"2017-04-28T06:04:13.386Z\", \"referenceStartUtc\": \"2017-04-28T06:24:11.994Z\", \"referenceEndUtc\": \"2017-04-28T06:24:49.231Z\", \"referenceNextUtc\": \"2017-04-28T06:29:43.667Z\", \"type\": \"feed\", \"berAverage\": 0.14105275288758765, \"transform\": \"none\" }, { \"id\": \"2016042806\", \"metadata\": \"4.32016042806\", \"candidateStartOffset\": 847127, \"candidateEndOffset\": 884363, \"candidateStartUtc\": \"2017-04-28T06:13:50.549Z\", \"candidateEndUtc\": \"2017-04-28T06:14:27.785Z\", \"referenceStartUtc\": \"2017-04-28T06:03:32.503Z\", \"referenceEndUtc\": \"2017-04-28T06:04:09.740Z\", \"referenceNextUtc\": \"2017-04-28T06:29:43.667Z\", \"type\": \"feed\", \"berAverage\": 0.14208535351796414, \"transform\": \"none\" }, { \"id\": \"2016042806\", \"metadata\": \"4.32016042806\", \"candidateStartOffset\": 614399, \"candidateEndOffset\": 679563, \"candidateStartUtc\": \"2017-04-28T06:09:57.821Z\", \"candidateEndUtc\": \"2017-04-28T06:11:02.985Z\", \"referenceStartUtc\": \"2017-04-28T06:20:15.667Z\", \"referenceEndUtc\": \"2017-04-28T06:21:20.849Z\", \"referenceNextUtc\": \"2017-04-28T06:29:43.667Z\", \"type\": \"feed\", \"berAverage\": 0.15415978176122358, \"transform\": \"none\" }, { \"id\": \"2016042806\", \"metadata\": \"4.32016042806\", \"candidateStartOffset\": 0, \"candidateEndOffset\": 121019, \"candidateStartUtc\": \"2017-04-28T05:59:43.422Z\", \"candidateEndUtc\": \"2017-04-28T06:01:44.441Z\", \"referenceStartUtc\": \"2017-04-28T06:20:19.267Z\", \"referenceEndUtc\": \"2017-04-28T06:22:20.285Z\", \"referenceNextUtc\": \"2017-04-28T06:29:43.667Z\", \"type\": \"feed\", \"berAverage\": 0.16100401059829558, \"transform\": \"none\" }]}")
+versions = ["4.4"]
+analyze = AnalyzeCeco()
 
+for version in versions:
+    ref_ceco_file = "24_Media2CECO_6-FLV-001.ceco"
+    analyze.ref_ceco_dir = os.path.join("D:", os.sep)
+    feed_meta_data = {"metadata": "ReferenceFileNed1.ts", "maxBacklog": 3600000}
+    analyze.ingest_ref_ceco(ref_ceco_file, feed_id="201705", meta_data=feed_meta_data)
 
-def define_feed(feed_id=None):
-    if not isinstance(feed_id, str):
-        feed_id = str(feed_id)
+    analyze.candidate_ceco_dir = os.path.join("D:\CecoComparision", version)
+    for candidate_ceco_file in os.listdir(analyze.candidate_ceco_dir):
+        detec_id = candidate_ceco_file[3:7]
+        channel_id = candidate_ceco_file[-5:-3]
+        (missing_ce, result) = analyze.analyze_candidate_ceco(candidate_ceco_file)
+        write_results((version, detec_id, channel_id, candidate_ceco_file, missing_ce, len(missing_ce), result))
 
-    url = "http://fpsnext.vagrant.box:9000/v2/feeds/%s" % (feed_id)
-    request_data = {"metadata": feed_id, "maxBacklog": 3600000}
-    request_header = {'Content-Type': 'application/json'}
-
-    response = requests.post(url, data=json.dumps(request_data), headers=request_header)
-    print(response.status_code)
-    print(response.request)
-    print(response.text)
-
-
-define_feed(feed_id=str(201604280602))
-
-
-def send_request(ce_data=None):
-    url = "http://fpsnext.vagrant.box:9000/v2/feeds/201604280601"
-    out_put_file = "D:\\CecoComparision\\4.4(28-Apr-08Hr)\\base64\\Base641704280600_01.txt"
-
-    with open(out_put_file, "r") as read_ce:
-        ce_data = read_ce.read()
-
-    if ce_data is not None:
-        request_data = {'ceco': ce_data}
-
-        response = requests.put(url=url, data=json.dumps(request_data), headers={'Content-Type': 'application/json'})
-
-        print (response.status_code)
-        print(response.headers)
-        print(response.text)
-    else:
-        print("Empty Ce Data")
-
-
-send_request()
+    analyze.clean_existing_feeds()
