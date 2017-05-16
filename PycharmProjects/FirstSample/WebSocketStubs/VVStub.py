@@ -1,7 +1,11 @@
-from autobahn.twisted.websocket import WebSocketServerProtocol
+import socket
+
+from autobahn.twisted.websocket import WebSocketServerProtocol, WebSocketServerFactory
 import json
 
 from multiprocessing import Queue
+
+from twisted.internet import reactor
 
 
 class ServerProtocol(WebSocketServerProtocol):
@@ -58,3 +62,14 @@ class ServerProtocol(WebSocketServerProtocol):
     def onClose(self, wasClean, code, reason):
         print("WebSocket connection closed: {}".format(reason))
 
+
+factory = WebSocketServerFactory(u"ws://127.0.0.1:9000")
+# factory = WebSocketServerFactory(u"ws://detector-dev.teletrax.com/detector")
+factory.protocol = ServerProtocol
+# factory.setProtocolOptions(maxConnections=2)
+
+# note to self: if using putChild, the child must be bytes...
+
+reactor.listenTCP(socket.IPPROTO_TCP,factory)
+reactor.run()
+print("Execution is returned here")
