@@ -152,7 +152,7 @@ class AnalyzeCeco:
 
 
 def write_results(data, detec_version=None):
-    file_name = "D:\\CecoComparision\\results\\result-weighted_ber-" + detec_version + ".csv"
+    file_name = "D:\\CecoComparision\\results\\result-weighted_ber-new-" + detec_version + ".csv"
 
     with open(file_name, 'a+') as csv_file:
         cw = csv.writer(csv_file)
