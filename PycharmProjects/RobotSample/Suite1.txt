@@ -1,0 +1,22 @@
+*** Settings ***
+Library     Sample/__init__.py
+Library     Sample/VerifyTests.py
+
+*** Variables ***
+${FirstName}    Anurag
+${LastName}     Mala
+
+*** Test Cases ***
+Check Name of Person
+    Check firstName     ${FirstName}
+    Check lastName      ${LastName}
+
+*** Keywords ***
+Check firstName
+    [Arguments]     ${FirstName}
+    fNametest run   ${FirstName}
+
+Check lastName
+    [Arguments]     ${LastName}
+    lNametest run   ${LastName}
+
