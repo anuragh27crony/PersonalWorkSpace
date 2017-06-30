@@ -10,7 +10,7 @@ def print_child_elems(root_elem,append_str=""):
             print(str(append_str)+" >> "+str(child_elem.tag)+" -- "+ str(child_elem.attrib))
 
 
-tree=etree.parse('XMLFiles/feed.xml')
+tree=etree.parse('resources/feed.xml')
 root=tree.getroot()
 
 print("print Root: "+str(root))

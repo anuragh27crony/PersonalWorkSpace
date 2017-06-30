@@ -1,11 +1,11 @@
 import xml.etree.ElementTree as ET
-from XMLConversion.Components import Feature, Story, TestCase, Step
+from RobotXMLConversion.Components import Feature, Story, TestCase, Step
 
 feature_list = []
 
 
 def _another():
-    source = 'XMLFiles/2016-09-01_161608_output_4.3_Rerun.xml'
+    source = 'resources/2016-09-01_161608_output_4.3_Rerun.xml'
     for event, elem in ET.iterparse(source=source, events=('start', 'end')):
         has_test_tag = False
         test_case = None
