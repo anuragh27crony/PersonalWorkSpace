@@ -6,6 +6,8 @@ import json
 
 dwld_mgr_url = "http://detector.teletrax.com/v1/prtg"
 accept_headers = {"Accept": "application/json"}
+elastic_url = "http://cvl-nj-log-001.teletrax.com:9200/detectors/disconnected"
+content_type_header = {"Content-Type": "application/json"}
 
 
 def fetch_connected_detectors():
@@ -33,7 +35,7 @@ def clean_disconnected_detectors(disconnected_detectors_set, connected_detectors
     return result_disconnected_detectors
 
 
-def fetch_disconnected_detectors():
+def fetch_disconnected_detector_channel():
     disconnected_detectors_set = set()
     fetch_channels = dwld_mgr_url + "/channels"
 
@@ -45,8 +47,6 @@ def fetch_disconnected_detectors():
             channel_data = json.loads(response.text)
             for channel in channel_data.get("configured"):
                 disconnected_detectors_set.add(channel.get("detectorName"))
-
-
     except Exception as e:
         print(e)
     return disconnected_detectors_set
@@ -60,10 +60,8 @@ def parse_push_data_kibana(detectors_set, time_stamp):
 
 
 def push_elastic_search(data):
-    elastic_url = "http://cvl-nj-log-001.teletrax.com:9200/detectors/disconnected"
-    headers = {"Content-Type": "application/json"}
     try:
-        response = requests.request("POST", elastic_url, headers=headers, data=json.dumps(data))
+        response = requests.request("POST", elastic_url, headers=content_type_header, data=json.dumps(data))
         if response.status_code is not 201:
             print(response.status_code)
     except Exception as e:
@@ -76,7 +74,7 @@ def initiate():
         start_time = time.time()
 
         time_stamp = datetime.utcnow().isoformat()
-        disconnected_detectors_set = fetch_disconnected_detectors()
+        disconnected_detectors_set = fetch_disconnected_detector_channel()
         parse_push_data_kibana(disconnected_detectors_set, time_stamp)
 
         exec_time_diff = time.time() - start_time

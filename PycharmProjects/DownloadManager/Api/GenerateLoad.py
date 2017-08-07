@@ -6,16 +6,17 @@ import time
 import requests
 import json
 
-host_url = "http://detector-uat.teletrax.com/v1"
+dwld_mgr_url = "http://detector-uat.teletrax.com/v1"
+kibana_callback_url = "http://uat-nj-log-001:9200/callbacks/callback/"
 
 
 def fetch_auth_code():
     access_token = None
-    auth_url = host_url + "/auth/signin"
+    auth_url = dwld_mgr_url + "/auth/signin"
     data = json.dumps({"userId": "amala", "password": "Voxa3179"})
 
     try:
-        response = requests.post(auth_url, data=data, headers={"Content-Type": "application/json"})
+        response = requests.request("POST", auth_url, data=data, headers={"Content-Type": "application/json"})
         if response.status_code == 200:
             response_data = json.loads(response.text)
             if response_data.get("success"):
@@ -31,14 +32,14 @@ def fetch_auth_code():
 def send_upload_request(access_token, detector_id, channel_index, start_time, end_time):
     is_successfully_completed = False
     if access_token is not None:
-        upload_url = host_url + "/video/upload/"
+        upload_url = dwld_mgr_url + "/video/upload/"
         body = {"detectorId": detector_id, "index": int(channel_index), "startDateTime": start_time,
                 "endDateTime": end_time
-            , "callbackUrl": "http://uat-nj-log-001:9200/callbacks/callback/" + str(uuid.uuid1())}
+            , "callbackUrl": kibana_callback_url + str(uuid.uuid1())}
         header = {"Content-Type": "application/json",
                   "Authorization": "Bearer " + access_token}
         try:
-            response = requests.post(upload_url, data=json.dumps(body), headers=header)
+            response = requests.request("POST", upload_url, data=json.dumps(body), headers=header)
             print("await response: " + detector_id)
             if response.status_code == 202:
                 is_successfully_completed = True
@@ -49,7 +50,7 @@ def send_upload_request(access_token, detector_id, channel_index, start_time, en
     return is_successfully_completed
 
 
-def generate_data(seed_value):
+def generate_data():
     detector_id = ["0C82", "07E0", "07E2", "07FA", "087D", "0889", "08AE", "08D6", "08EC", "0921", "0956", "0967",
                    "076F", "07d9", "0844", "085D", "087B", "089D", "08D0", "091E", "0962", "0966", "0969", "096D",
                    "F783", "079B", "07A4", "07AB", "07B5", "07C9", "0810", "0883", "08CA", "08DC", "08E3", "08E9",
@@ -63,8 +64,8 @@ def generate_data(seed_value):
                    "07AD", "0912"]
     channel_list = ["01", "02", "03", "04"]
 
-    detec = detector_id[random.randint(0, len(detector_id)-1)]
-    index = channel_list[random.randint(0, len(channel_list)-1)]
+    detec = detector_id[random.randint(0, len(detector_id) - 1)]
+    index = channel_list[random.randint(0, len(channel_list) - 1)]
 
     hour_rand = random.randint(1, 22)
     min_rand = random.randint(1, 59)
@@ -91,11 +92,13 @@ def generate_random_request():
                 access_token = None
                 current_milestone_val = current_time_diff.seconds % 3600
             else:
-                data = generate_data(current_time_diff.seconds)
+                data = generate_data()
                 print("sending Request for detector" + data.get("detec"))
                 if not send_upload_request(access_token, data.get("detec"), data.get("index"),
                                            data.get("startDateTime"), data.get("endDateTime")):
                     access_token = None
-                time.sleep(random.randint(5,8))
+                time.sleep(random.randint(5, 8))
 
-generate_random_request()
+
+if __name__ == '__main__':
+    generate_random_request()
