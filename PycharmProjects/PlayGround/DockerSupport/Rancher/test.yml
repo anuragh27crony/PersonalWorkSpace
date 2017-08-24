@@ -1,0 +1,22 @@
+version: '2'
+services:
+- 0T68:
+    image: registry.teletrax.biz/ttx/videoproviderservice:latest
+    extra_hosts:
+    - detector.vagrant.teletrax.com:192.168.214.178
+    volumes:
+    - /data:/opt/video-provider-service/data
+    environment:
+      SERVER_URL: detector.vagrant.teletrax.com
+      DATE: '2014-02-02'
+      DETECTOR_ID: 0T68
+      SLEEP: '1'
+      CHANNEL_LIST: 01,02,03,04,05,06,07,08
+- rabbit:
+    image: rabbitmq:3.6-management
+    ports:
+    - 5672:5672/tcp
+    - 15672:15672/tcp
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
