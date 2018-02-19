@@ -22,7 +22,7 @@ def run_cli(command_line):
 def create_cli(time_ticker, output_dir, channel_id_str):
     os.chdir('C://')
     command_prefix = "ffmpeg -f lavfi -i testsrc=duration=60:size=320x240:rate=1 -vf \"drawtext=fontfile=/Windows/Fonts/Arial.ttf:timecode='"
-    command_suffix = "':rate=1::fontcolor=white:fontsize=40:x=w-tw-20:y=th+50:box=1:boxcolor=black@0.5:boxborderw=10,format=yuv420p\" -c:v libx264 -c:a copy -y "
+    command_suffix = "':rate=29.97::fontcolor=white:fontsize=40:x=w-tw-20:y=th+50:box=1:boxcolor=black@0.5:boxborderw=10,format=yuv420p\" -c:v libx264 -c:a copy -y "
     output_file_path = create_output_filename(time_ticker, output_dir, channel_id_str)
     return ' '.join((command_prefix, time_ticker.strftime("%H\:%M\:%S\:00"), command_suffix, output_file_path))
 

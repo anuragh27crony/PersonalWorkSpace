@@ -1,0 +1,28 @@
+{
+  "wabc": {
+    "Arbor": {
+      "channel_index": 4,
+      "dirpath": "Arbor_Videos",
+      "apiurl": "http://civ-vid-log-08.teletrax.com:8008/CivApi"
+    },
+    "DetectorLogging": {
+      "dirpath": "4.5_Videos",
+      "channel_index": 8,
+      "fsd": true,
+      "qsd": false
+    },
+    "candidate": [
+      {
+        "channel_index": 4,
+        "version": 4.4,
+        "dirpath": "4.4_ceco\\collection",
+        "mac": "0F33"
+      },
+      {
+        "dirpath": "4.5_ceco\\collection",
+        "version": 4.5,
+        "mac": "0A00"
+      }
+    ]
+  }
+}

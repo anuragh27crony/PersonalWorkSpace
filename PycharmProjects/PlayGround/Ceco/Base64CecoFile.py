@@ -1,16 +1,14 @@
 import csv
 import os
 import base64
-import FpsNext
 import json
 
+from Ceco import FpsNext
 from dateutil import parser
 
 
 class AnalyzeCeco:
     def __init__(self):
-        self.ref_ceco_dir = "D:\CecoComparision\\4.3\\20170505\\00"
-        self.candidate_ceco_dir = "D:\CecoComparision\\4.4\\20170505\\00"
         self.fpsnext = FpsNext.FpsNext()
 
     def create_ceco_base64_str(self, ceco_file_path=None, encoded_file_output=None):
@@ -20,7 +18,7 @@ class AnalyzeCeco:
         if encoded_file_output is not None:
             with open(encoded_file_output, "w") as write_file:
                 write_file.write(encoded_string)
-        return encoded_string
+        return encoded_string.decode("utf-8")
 
     def map_matching_zones(self, start_time, end_time, ce_elements):
         matching_ce_elements = list()
@@ -59,14 +57,14 @@ class AnalyzeCeco:
         global final_result, missing_zones
         counter = 1
         avg_ber_value = -1
-
+        search_analysis_result = json.loads(search_analysis_result)
         try:
             ce_elements = search_analysis_result.get("data").get("analysis").get("streams")[0].get("channels")[0].get(
                 "contentElements")
             for ce in ce_elements:
                 ce.update({"id": counter})
                 counter += 1
-
+            print(counter)
             counter = 0
             ber_values = list()
             for result in search_analysis_result.get("data").get("results"):
@@ -74,7 +72,6 @@ class AnalyzeCeco:
                                                             result.get("candidateEndUtc"),
                                                             ce_elements)
                 result.update({"matchingZones": matching_ce_zones})
-
                 ber_values.append(result.get("berAverage") * len(matching_ce_zones))
                 counter += len(matching_ce_zones)
             final_result = search_analysis_result.get("data").get("results")
@@ -90,30 +87,46 @@ class AnalyzeCeco:
 
         return missing_zones, avg_ber_value, final_result
 
-    def ingest_ref_ceco(self, ceco_file_name=None, feed_id=None, meta_data=None):
-
-        if ceco_file_name is not None:
-            ref_ceco_file_path = os.path.join(self.ref_ceco_dir, ceco_file_name)
+    def ingest_ref_ceco(self, ref_ceco_dir, ref_ceco_file_name=None, feed_id=None, meta_data=None):
+        ingestion_succeeded = False
+        if ref_ceco_file_name:
+            ref_ceco_file_path = os.path.join(ref_ceco_dir, ref_ceco_file_name)
             if feed_id is None:
-                feed_id = ceco_file_name[7:17]
-            base64_ceco_str = self.create_ceco_base64_str(ceco_file_path=ref_ceco_file_path)
+                print("ingesting: FeedId is empty")
+                feed_id = ref_ceco_file_name
 
-            self.fpsnext.define_feed(feed_id=feed_id, request_meta_data=meta_data)
-            self.fpsnext.ingest_feed(feed_id=feed_id, ceco_data=base64_ceco_str)
+            print(ref_ceco_dir + "->" + ref_ceco_file_name + " : feedid" + feed_id)
+            return_code = self.fpsnext.define_feed(feed_id=feed_id, request_meta_data=meta_data)
+            if return_code and return_code > 199 and return_code < 300:
+                try:
+                    base64_ceco_str = self.create_ceco_base64_str(ceco_file_path=ref_ceco_file_path)
+                    return_code = self.fpsnext.ingest_feed(feed_id=feed_id, ceco_data=base64_ceco_str)
+                    ingestion_succeeded = True if return_code and return_code > 199 and return_code < 300 else False
+                except FileNotFoundError as FNF:
+                    print("Ref Ceco Missing")
 
-    def analyze_candidate_ceco(self, ceco_file_name=None):
-        # candidate_detec_id = candidate_ceco_file[3:7]
+        return ingestion_succeeded
+
+    def analyze_candidate_ceco(self, candidate_ceco_dir, ceco_file_name=None):
         missing_zones = None
         result = None
         avg_ber_value = -1
-        if ceco_file_name is not None:
-            candidate_ceco_file_path = os.path.join(self.candidate_ceco_dir, ceco_file_name)
+        if ceco_file_name:
+            candidate_ceco_file_path = os.path.join(candidate_ceco_dir, ceco_file_name)
             base64_ceco_str = self.create_ceco_base64_str(ceco_file_path=candidate_ceco_file_path)
 
             search_result = self.fpsnext.identify_feed(ceco_data=base64_ceco_str)
             (missing_zones, avg_ber_value, result) = self.analyze_search_result(search_result)
 
         return missing_zones, avg_ber_value, json.dumps(result)
+
+    def analyze_ceco(self, ceco_file_name=None):
+        if ceco_file_name is not None:
+            candidate_ceco_file_path = os.path.join(self.candidate_ceco_dir, ceco_file_name)
+            base64_ceco_str = self.create_ceco_base64_str(ceco_file_path=candidate_ceco_file_path)
+
+            search_result = self.fpsnext.identify_feed(ceco_data=base64_ceco_str)
+            return search_result
 
     def clean_existing_feeds(self):
         available_feeds_result = self.fpsnext.list_feeds()
@@ -139,49 +152,11 @@ class AnalyzeCeco:
                     if os.path.isfile(file) and "Aggr" not in file.title():
                         shutil.copy2(os.path.join(source_dir, file), dest_dir)
 
-    def re_ingest_ref(self):
+    def re_ingest_ref(self, ref_ceco_dir, ref_ceco_file_name, feed_id="201705"):
         try:
             self.clean_existing_feeds()
-            ref_ceco_file = "24_Media2CECO_6-FLV-001.ceco"
-            self.ref_ceco_dir = os.path.join("D:", os.sep)
-            feed_meta_data = {"metadata": "ReferenceFileNed1.ts", "maxBacklog": 3600000}
-            self.ingest_ref_ceco(ref_ceco_file, feed_id="201705", meta_data=feed_meta_data)
+            feed_meta_data = {"metadata": feed_id, "maxBacklog": 3600000}
+            self.ingest_ref_ceco(ref_ceco_dir, ref_ceco_file_name, feed_id=feed_id, meta_data=feed_meta_data)
         except Exception as e:
             print("re_ingest_ref: ")
             print(e)
-
-
-def write_results(data, detec_version=None):
-    file_name = "D:\\CecoComparision\\results\\result-weighted_ber-new-" + detec_version + ".csv"
-
-    with open(file_name, 'a+') as csv_file:
-        cw = csv.writer(csv_file)
-        cw.writerow(list(data))
-
-
-versions = ["4.3", "4.4"]
-analyze = AnalyzeCeco()
-# analyze.ceco_aggr(source_dir="D:\\CecoComparision\\4.3-20170507")
-# analyze.ceco_aggr(source_dir="D:\\CecoComparision\\4.4-20170507")
-
-for version in versions:
-    analyze.re_ingest_ref()
-    if version in "4.3":
-        analyze.candidate_ceco_dir = os.path.join("D:\CecoComparision\\4.3-20170507\\aggr")
-    else:
-        analyze.candidate_ceco_dir = os.path.join("D:\CecoComparision\\4.4-20170507\\aggr")
-
-    for candidate_ceco_file in os.listdir(analyze.candidate_ceco_dir):
-        detec_id = candidate_ceco_file[3:7]
-        channel_id = candidate_ceco_file[-5:-3]
-        (missing_ce, avg_ber_value, result) = analyze.analyze_candidate_ceco(candidate_ceco_file)
-        write_results(
-            (version, detec_id, channel_id, candidate_ceco_file, avg_ber_value, len(missing_ce), missing_ce, result),
-            detec_version=version)
-
-        if not len(result) > 2:
-            analyze.re_ingest_ref()
-            (missing_ce, avg_ber_value, result) = analyze.analyze_candidate_ceco(candidate_ceco_file)
-            write_results((version, detec_id, channel_id, candidate_ceco_file, avg_ber_value, len(missing_ce),
-                           missing_ce, result),
-                          detec_version=version)

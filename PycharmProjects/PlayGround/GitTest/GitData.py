@@ -2,58 +2,11 @@ import json
 import platform
 import os
 import re
-import xml.etree.ElementTree as ET
 
 from datetime import datetime
 from github import Github
 
-
-class TestCase(object):
-    def __init__(self):
-        self.status = 'No RUN'
-        self.name = ''
-        self.start_time = ''
-        self.end_time = ''
-
-    def jsonify(self):
-        return dict({'name': self.name, 'status': self.status, 'start': self.start_time, 'end': self.end_time})
-
-
-class TotalRunDetails(object):
-    def __init__(self):
-        self.test_case_list = []
-        self.total_pass_count = 0
-        self.total_fail_count = 0
-
-    def jsonify(self):
-        self.total_tests = self.total_fail_count + self.total_pass_count
-        return dict({'aggr': {'pass': self.total_pass_count, 'fail': self.total_fail_count, 'total': self.total_tests},
-                     'scenarios': self.test_case_list})
-
-
-def extract_execution_stats(robot_xml_file_path):
-    total_run_details = TotalRunDetails()
-    print(robot_xml_file_path)
-    for event, elem in ET.iterparse(source=robot_xml_file_path, events=('start', 'end')):
-        if event == 'end':
-            if elem.tag == 'test':
-                test_case = TestCase()
-                test_case.name = elem.attrib.get("name")
-                for node in elem.getchildren():
-                    if node.tag == 'status':
-                        test_case.status = node.attrib.get("status")
-                        test_case.start_time = node.attrib.get("starttime")
-                        test_case.end_time = node.attrib.get("endtime")
-                total_run_details.test_case_list.append(test_case.jsonify())
-
-        if event == 'start':
-            if elem.tag == 'total':
-                for node in elem.getchildren():
-                    if node.text.lower() == 'all tests':
-                        total_run_details.total_pass_count = int(node.attrib.get("pass"))
-                        total_run_details.total_fail_count = int(node.attrib.get("fail"))
-
-    return total_run_details.jsonify()
+from GitTest.readrobotxml import extract_execution_stats
 
 
 def fetch_build_no(filepath):
@@ -75,7 +28,6 @@ def prepare_env_data(computer_name, build_no, product=''):
         os = '%s %s' % (platform.system(), platform.uname()[2])
     else:
         os = '%s %s' % (platform.linux_distribution()[0][:6], platform.linux_distribution()[1])
-
 
     if 'pcd' in product:
         ref_env_data = {'CVL-WST-073': {'mode': 'Osprey', 'os': '2008 Web'},
@@ -178,8 +130,6 @@ def upload_results_github(robot_xml_file_path=None,
         print("Exception Robot xml file is none: %s", robot_xml_file_path)
 
 
-# json_data=extract_execution_stats(os.path.join(os.getcwd(), "Data", "2016-11-08_075935_output_FPTool_Rerun.xml"))
-# print(json.dumps(json_data))
 
 xml_file = os.path.join(os.getcwd(), "Data", "2016-11-08_075935_output_FPTool_Rerun.xml")
 upload_results_github(robot_xml_file_path=xml_file, build_number='4.1', product='Fptool')

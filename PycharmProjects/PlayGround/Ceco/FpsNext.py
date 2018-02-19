@@ -7,9 +7,15 @@ from operator import itemgetter
 
 class FpsNext:
     def __init__(self):
-        self.base_url = "http://fpsnext.vagrant.box:9000/v2"
+        self.base_url = "http://192.168.217.175:9000/v2"
 
-    def define_feed(self, feed_id=None,request_meta_data=None):
+    def restart_search_workers(self):
+        url = self.base_url + "/admin/clean"
+        response = requests.post(url)
+
+        return json.loads(response.text)
+
+    def define_feed(self, feed_id=None, request_meta_data=None):
         if not isinstance(feed_id, str):
             feed_id = str(feed_id)
 
@@ -19,7 +25,9 @@ class FpsNext:
         request_header = {'Content-Type': 'application/json'}
 
         response = requests.post(url, data=json.dumps(request_meta_data), headers=request_header)
-        print ("Define feed %s" % (str(response.status_code)))
+        print("Define feed %s" % (str(response.status_code)))
+
+        return response.status_code
 
     def ingest_feed(self, feed_id=None, ceco_data=None, ceco_file_path=None):
         url = self.base_url + "/feeds/" + feed_id
@@ -36,18 +44,20 @@ class FpsNext:
                 print("cecoFilePath is Empty")
 
         response = requests.put(url=url, data=json.dumps(request_data), headers={'Content-Type': 'application/json'})
-        print ("Ingest_feed %s" % (str(response.status_code)))
+        print("Ingest_feed %s" % (str(response.status_code)))
+        return response.status_code
 
     def identify_feed(self, ceco_data=None, analyze_ceco=True):
         url = self.base_url + "/identify?analyze=" + str(analyze_ceco)
         return_response = dict()
         if ceco_data is not None:
-            request_data = {'ceco': ceco_data, "maxResults": 100, "withSpeedTransform": True, "match": {"maxAge": 0}}
+            request_data = {"ceco": "test", "maxResults": 500, "withSpeedTransform": True, "match": {"maxAge": 0}}
+            request_data.update({"ceco": str(ceco_data)})
+
             response = requests.post(url=url, data=json.dumps(request_data),
                                      headers={'Content-Type': 'application/json'})
-            print ("Identify_feed %s" % (str(response.status_code)))
-            return_response = json.loads(response.text)
-        return return_response
+            print("Identify_feed %s" % (str(response.status_code)))
+        return response.text
 
     def list_feeds(self):
         url = self.base_url + "/feeds"

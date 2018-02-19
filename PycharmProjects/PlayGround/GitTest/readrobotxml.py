@@ -50,9 +50,6 @@ def extract_execution_stats(robot_xml_file_path):
     return total_run_details.jsonify()
 
 
-# print(json.dumps(extract_execution_stats('2016-09-16_133945_output_4.3.xml')))
-
-
 def write_file(data, file_path, is_data_json=False):
     if not os.path.exists(file_path):
         os.makedirs(os.path.dirname(file_path))
@@ -67,19 +64,3 @@ def write_file(data, file_path, is_data_json=False):
                 file_write.write(data)
     except Exception as e:
         print("Exception Occured", e)
-
-
-print(os.path.abspath(os.path.join("..", "artifacts", "git", "filename3.txt")))
-# write_file("testing is fun", file_path=os.path.join("..", "artifacts", "git", "filename3.txt"))
-
-
-def fetch_build_no(filepath):
-    with open(filepath, 'r') as file:
-        data = file.readline()
-        return data.split("build")[1].split(",")[0]
-
-#
-# file_name='AuthorizationCode.txt'
-# file_path=os.path.join(os.getcwd(),file_name)
-# print(file_path)
-# print(read_build(file_path))

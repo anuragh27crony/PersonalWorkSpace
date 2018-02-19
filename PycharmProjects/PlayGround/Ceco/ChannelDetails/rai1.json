@@ -1,0 +1,28 @@
+{
+  "rai1": {
+    "Arbor": {
+      "channel_index": 5,
+      "dirpath": "Arbor_Videos",
+      "apiurl": "http://ec-vid-log-04.teletrax.com:8904/CivApi"
+    },
+    "DetectorLogging": {
+      "channel_index": 7,
+      "dirpath": "4.5_Videos",
+      "fsd": true,
+      "qsd": false
+    },
+    "candidate": [
+      {
+        "version": 4.4,
+        "channel_index": 6,
+        "dirpath": "4.4_ceco\\collection",
+        "mac": "0C13"
+      },
+      {
+        "version": 4.5,
+        "dirpath": "4.5_ceco\\collection",
+        "mac": "0C19"
+      }
+    ]
+  }
+}

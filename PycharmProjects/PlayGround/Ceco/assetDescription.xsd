@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="0.1" id="metadata.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="FPMetadata" type="FPMetadataType"/>
+  
+  <xs:simpleType name="FieldType">
+    <xs:restriction base="xs:string">
+      <xs:pattern   value="[a-zA-Z0-9,:!.#=+_ {}^?-]+"/>
+    <xs:maxLength value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="FPMetadataType">
+    <xs:all>      
+      <xs:element name="First"  type="FieldType" minOccurs="1" maxOccurs="1"/>           
+      <xs:element name="Second" type="FieldType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Third"  type="FieldType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Fourth" type="FieldType" minOccurs="1" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+</xs:schema>

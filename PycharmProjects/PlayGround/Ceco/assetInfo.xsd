@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AssetInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Stream" type="StreamType" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="StreamType">
+    <xs:sequence>
+      <xs:element name="Channel" type="ChannelType" minOccurs="1" maxOccurs="4"/>
+    </xs:sequence>
+    <xs:attribute name="Type" type="TypeType" use="required"/>
+    <xs:attribute name="Number" type="xs:unsignedInt" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ChannelType">
+    <xs:attribute name="Algo" type="AlgoType" use="required"/>
+  </xs:complexType>
+
+  <xs:simpleType name="TypeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Video" />
+      <xs:enumeration value="Audio" />
+      <xs:enumeration value="" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="AlgoType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VIDEO_ALGO_V5_4_65S" />
+      <xs:enumeration value="VIDEO_ALGO_V6_4_65S" />
+      <xs:enumeration value="VIDEO_FEATURES_V1" />
+      <xs:enumeration value="VIDEO_FEATURES_V2" />
+      <xs:enumeration value="VIDEO_FEATURES_V3" />
+      <xs:enumeration value="AUDIO_ALGO_V1_1_3S" />
+      <xs:enumeration value="AUDIO_ALGO_V1_1_6S" />
+      <xs:enumeration value="AUDIO_ALGO_V4_3S" />
+      <xs:enumeration value="AUDIO_ALGO_V4_6S" />
+      <xs:enumeration value="AUDIO_ALGO_V5" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

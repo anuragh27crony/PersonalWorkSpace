@@ -1,0 +1,28 @@
+{
+  "tagg": {
+    "Arbor": {
+      "channel_index": 6,
+      "dirpath": "Arbor_Videos",
+      "apiurl": "http://vid-log-ehv07.teletrax.com:8107/CivApi/"
+    },
+    "DetectorLogging": {
+      "channel_index": 5,
+      "dirpath": "4.5_Videos",
+      "fsd": false,
+      "qsd": true
+    },
+    "candidate": [
+      {
+        "version": 4.4,
+        "channel_index": 2,
+        "dirpath": "4.4_ceco\\collection",
+        "mac": "0D21"
+      },
+      {
+        "version": 4.5,
+        "dirpath": "4.5_ceco\\collection",
+        "mac": "0C23"
+      }
+    ]
+  }
+}

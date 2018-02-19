@@ -1,0 +1,29 @@
+[2018-Feb-12 16:35:00.839749] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Options Map
+[2018-Feb-12 16:35:00.841754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: CE.InputFilenameTemplate
+[2018-Feb-12 16:35:00.841754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: CE.OutputFilenameTemplate
+[2018-Feb-12 16:35:00.841754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: CECO.OutputFilename
+[2018-Feb-12 16:35:00.841754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: General.Input
+[2018-Feb-12 16:35:00.841754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: General.Logging.EnableConsoleOutput
+[2018-Feb-12 16:35:00.841754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: General.Logging.EnableFileOutput
+[2018-Feb-12 16:35:00.841754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: General.Logging.OutputFile
+[2018-Feb-12 16:35:00.841754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: General.Logging.OutputLevel
+[2018-Feb-12 16:35:00.841754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: General.Output
+[2018-Feb-12 16:35:00.841754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: Media.Channels
+[2018-Feb-12 16:35:00.841754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: Media.Constraint.Duration
+[2018-Feb-12 16:35:00.841754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: Media.Constraint.Mode
+[2018-Feb-12 16:35:00.841754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: Media.GenerationMode
+[2018-Feb-12 16:35:00.842754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: Media.ProtectionMode
+[2018-Feb-12 16:35:00.842754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: inifile
+[2018-Feb-12 16:35:00.842754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Media
+[2018-Feb-12 16:35:00.842754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> CECO
+[2018-Feb-12 16:35:00.842754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CCECOOutput::Setup()
+[2018-Feb-12 16:35:00.842754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CFingerprinterInput::Setup()
+[2018-Feb-12 16:35:00.842754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] Instantiate channels
+[2018-Feb-12 16:35:00.842754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CMHSDKChannelHandler : VIDEO_ALGO_V5_4_65S
+[2018-Feb-12 16:35:00.842754] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CMHSDKChannelHandler : VIDEO_ALGO_V5_4_65S Channel=1
+[2018-Feb-12 16:35:00.843752] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CMHSDKChannelHandler : VIDEO_ALGO_V5_4_65S Algorithm=0
+[2018-Feb-12 16:35:00.843752] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Channel type: Media
+[2018-Feb-12 16:35:00.843752] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> D:\Dump\CecoComparision\4.4-4.5\UDP\Re-Mux_Check_ts\4.5_videos\concat_hour_dir\1.3.1.105_1800000\concat_HourLong00.mp4
+[2018-Feb-12 16:35:00.843752] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] MHSDKOpenSession
+[2018-Feb-12 16:35:00.844752] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] MHSDK Event CallBack
+[2018-Feb-12 16:35:00.844752] [               ] [FPTool] [Error  ][int __cdecl CToolHandler::Run(int,char *[])] -> Message on the license: Use license file C:\Program Files\Teletrax\FPToolCmd\MHSDK.lic

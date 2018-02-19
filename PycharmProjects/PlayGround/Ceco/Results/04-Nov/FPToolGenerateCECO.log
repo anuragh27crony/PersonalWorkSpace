@@ -1,0 +1,508 @@
+[2017-Nov-08 15:06:47.096053] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Options Map
+[2017-Nov-08 15:06:47.097553] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: CE.InputFilenameTemplate
+[2017-Nov-08 15:06:47.097553] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: CE.OutputFilenameTemplate
+[2017-Nov-08 15:06:47.097553] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: CECO.OutputFilename
+[2017-Nov-08 15:06:47.097553] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: General.Input
+[2017-Nov-08 15:06:47.097553] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: General.Logging.EnableConsoleOutput
+[2017-Nov-08 15:06:47.097553] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: General.Logging.EnableFileOutput
+[2017-Nov-08 15:06:47.097553] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: General.Logging.OutputFile
+[2017-Nov-08 15:06:47.097553] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: General.Logging.OutputLevel
+[2017-Nov-08 15:06:47.097553] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: General.Output
+[2017-Nov-08 15:06:47.097553] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: Media.Channels
+[2017-Nov-08 15:06:47.098080] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: Media.Constraint.Duration
+[2017-Nov-08 15:06:47.098080] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: Media.Constraint.Mode
+[2017-Nov-08 15:06:47.098080] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: Media.GenerationMode
+[2017-Nov-08 15:06:47.098080] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: Media.ProtectionMode
+[2017-Nov-08 15:06:47.098080] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Option: inifile
+[2017-Nov-08 15:06:47.098080] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Media
+[2017-Nov-08 15:06:47.098080] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> CECO
+[2017-Nov-08 15:06:47.098080] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CCECOOutput::Setup()
+[2017-Nov-08 15:06:47.098555] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CFingerprinterInput::Setup()
+[2017-Nov-08 15:06:47.098555] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] Instantiate channels
+[2017-Nov-08 15:06:47.098555] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CMHSDKChannelHandler : VIDEO_ALGO_V5_4_65S
+[2017-Nov-08 15:06:47.098555] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CMHSDKChannelHandler : VIDEO_ALGO_V5_4_65S Channel=1
+[2017-Nov-08 15:06:47.098555] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CMHSDKChannelHandler : VIDEO_ALGO_V5_4_65S Algorithm=0
+[2017-Nov-08 15:06:47.098555] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> Channel type: Media
+[2017-Nov-08 15:06:47.098555] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> D:\Dump\CecoComparision\4.4-4.5\udp\07-nov\tagg_f_1300\4.5_videos\HourLong23.mp4
+[2017-Nov-08 15:06:47.099054] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] MHSDKOpenSession
+[2017-Nov-08 15:06:47.099574] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:47.099574] [               ] [FPTool] [Error  ][int __cdecl CToolHandler::Run(int,char *[])] -> Message on the license: Use license file C:\Program Files\Teletrax\FPToolCmd\MHSDK.lic
+[2017-Nov-08 15:06:49.757654] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] MHSDKStartSession
+[2017-Nov-08 15:06:49.760152] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] Starting channels
+[2017-Nov-08 15:06:49.760630] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CMHSDKChannelHandler(Media.Channel.VIDEO_ALGO_V5_4_65S).Start()
+[2017-Nov-08 15:06:49.760630] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] Waiting for termination of the channel threads
+[2017-Nov-08 15:06:49.760630] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CMHSDKChannelHandler(Media.Channel.VIDEO_ALGO_V5_4_65S).Wait()
+[2017-Nov-08 15:06:49.760630] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CMHSDKChannelHandler(Media.Channel.VIDEO_ALGO_V5_4_65S).Wait()
+[2017-Nov-08 15:06:49.789150] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:49.789150] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 0%
+[2017-Nov-08 15:06:50.302014] [00:00:00.541622] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:50.677301] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:50.677802] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 1%
+[2017-Nov-08 15:06:50.798887] [00:00:01.038801] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:51.046844] [00:00:01.286672] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:51.292017] [00:00:01.531580] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:51.312531] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:51.312531] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 2%
+[2017-Nov-08 15:06:51.530186] [00:00:01.770132] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:51.767855] [00:00:02.007758] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:51.924966] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:51.924966] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 3%
+[2017-Nov-08 15:06:52.005542] [00:00:02.245580] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:52.244719] [00:00:02.484763] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:52.485890] [00:00:02.725551] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:52.544432] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:52.544432] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 4%
+[2017-Nov-08 15:06:52.712051] [00:00:02.951998] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:52.949730] [00:00:03.189717] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:53.157878] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:53.157878] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 5%
+[2017-Nov-08 15:06:53.200908] [00:00:03.440684] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:53.442577] [00:00:03.682226] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:53.678245] [00:00:03.918208] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:53.774814] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:53.774814] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 6%
+[2017-Nov-08 15:06:53.917915] [00:00:04.157571] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:54.159161] [00:00:04.399084] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:54.416842] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:54.416842] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 7%
+[2017-Nov-08 15:06:54.423845] [00:00:04.663629] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:54.687534] [00:00:04.927493] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:54.929760] [00:00:05.169555] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:55.065375] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:55.065375] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 8%
+[2017-Nov-08 15:06:55.170930] [00:00:05.410783] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:55.403129] [00:00:05.642973] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:55.645282] [00:00:05.885043] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:55.677305] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:55.677305] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 9%
+[2017-Nov-08 15:06:55.886954] [00:00:06.126719] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:56.131139] [00:00:06.370875] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:56.306263] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:56.306263] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 10%
+[2017-Nov-08 15:06:56.375812] [00:00:06.615549] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:56.617984] [00:00:06.857614] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:56.855152] [00:00:07.094993] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:56.924702] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:56.924702] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 11%
+[2017-Nov-08 15:06:57.097848] [00:00:07.337458] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:57.342022] [00:00:07.581751] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:57.547692] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:57.547692] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 12%
+[2017-Nov-08 15:06:57.578715] [00:00:07.818696] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:57.823031] [00:00:08.063046] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:58.063240] [00:00:08.303180] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:58.168816] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:58.169316] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 13%
+[2017-Nov-08 15:06:58.304928] [00:00:08.544489] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:58.546676] [00:00:08.786622] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:58.787346] [00:00:09.026931] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:58.792869] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:58.792869] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 14%
+[2017-Nov-08 15:06:59.026050] [00:00:09.265866] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:59.267499] [00:00:09.507372] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:59.411120] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:06:59.411120] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 15%
+[2017-Nov-08 15:06:59.506697] [00:00:09.746676] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:59.746868] [00:00:09.986417] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:06:59.983036] [00:00:10.222873] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:00.026066] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:00.026566] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 16%
+[2017-Nov-08 15:07:00.221737] [00:00:10.461352] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:00.461907] [00:00:10.701553] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:00.644050] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:00.644050] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 17%
+[2017-Nov-08 15:07:00.703593] [00:00:10.943140] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:00.942263] [00:00:11.181905] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:01.180431] [00:00:11.420273] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:01.260989] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:01.260989] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 18%
+[2017-Nov-08 15:07:01.419601] [00:00:11.659190] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:01.657270] [00:00:11.897132] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:01.875425] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:01.875425] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 19%
+[2017-Nov-08 15:07:01.895439] [00:00:12.135249] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:02.132608] [00:00:12.372502] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:02.373435] [00:00:12.613004] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:02.491534] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:02.492034] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 20%
+[2017-Nov-08 15:07:02.614120] [00:00:12.854063] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:02.853291] [00:00:13.092924] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:03.094461] [00:00:13.334077] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:03.110973] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:03.110973] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 21%
+[2017-Nov-08 15:07:03.331732] [00:00:13.571507] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:03.573119] [00:00:13.812983] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:03.732733] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:03.732733] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 22%
+[2017-Nov-08 15:07:03.815791] [00:00:14.055505] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:04.054491] [00:00:14.294221] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:04.296164] [00:00:14.535869] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:04.350702] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:04.350702] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 23%
+[2017-Nov-08 15:07:04.534852] [00:00:14.774645] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:04.776061] [00:00:15.015857] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:04.967246] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:04.967246] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 24%
+[2017-Nov-08 15:07:05.013279] [00:00:15.253299] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:05.255529] [00:00:15.495380] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:05.497200] [00:00:15.737069] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:05.588265] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:05.588265] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 25%
+[2017-Nov-08 15:07:05.736370] [00:00:15.976080] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:05.977542] [00:00:16.217466] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:06.210217] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:06.210217] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 26%
+[2017-Nov-08 15:07:06.219224] [00:00:16.459138] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:06.457394] [00:00:16.697130] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:06.695592] [00:00:16.935151] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:06.823202] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:06.823202] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 27%
+[2017-Nov-08 15:07:06.932321] [00:00:17.172033] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:07.183502] [00:00:17.423491] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:07.429676] [00:00:17.669218] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:07.459697] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:07.459697] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 28%
+[2017-Nov-08 15:07:07.671479] [00:00:17.911439] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:07.911150] [00:00:18.151008] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:08.076820] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:08.076820] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 29%
+[2017-Nov-08 15:07:08.152925] [00:00:18.392457] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:08.411091] [00:00:18.650721] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:08.650760] [00:00:18.890332] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:08.716307] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:08.716307] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 30%
+[2017-Nov-08 15:07:08.894435] [00:00:19.134218] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:09.142611] [00:00:19.382501] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:09.346765] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:09.346765] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 31%
+[2017-Nov-08 15:07:09.381290] [00:00:19.621273] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:09.623000] [00:00:19.862979] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:09.860701] [00:00:20.100565] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:09.964775] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:09.964775] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 32%
+[2017-Nov-08 15:07:10.100871] [00:00:20.340881] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:10.338180] [00:00:20.578110] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:10.576850] [00:00:20.816693] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:10.579351] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:10.579351] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 33%
+[2017-Nov-08 15:07:10.811017] [00:00:21.050798] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:11.052200] [00:00:21.291887] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:11.192313] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:11.192313] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 34%
+[2017-Nov-08 15:07:11.292400] [00:00:21.532346] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:11.530069] [00:00:21.770046] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:11.770239] [00:00:22.010198] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:11.809767] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:11.809767] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 35%
+[2017-Nov-08 15:07:12.008418] [00:00:22.248081] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:12.246086] [00:00:22.485724] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:12.424234] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:12.424734] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 36%
+[2017-Nov-08 15:07:12.485777] [00:00:22.725492] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:12.723973] [00:00:22.963951] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:12.965705] [00:00:23.205570] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:13.044260] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:13.044260] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 37%
+[2017-Nov-08 15:07:13.206376] [00:00:23.446031] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:13.445057] [00:00:23.684628] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:13.660386] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:13.660386] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 38%
+[2017-Nov-08 15:07:13.684431] [00:00:23.924076] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:13.922512] [00:00:24.162230] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:14.163683] [00:00:24.403498] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:14.276786] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:14.277286] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 39%
+[2017-Nov-08 15:07:14.402375] [00:00:24.642165] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:14.646075] [00:00:24.886027] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:14.885756] [00:00:25.125288] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:14.898765] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:14.898765] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 40%
+[2017-Nov-08 15:07:15.127428] [00:00:25.367191] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:15.373632] [00:00:25.613494] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:15.536271] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:15.536271] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 41%
+[2017-Nov-08 15:07:15.627336] [00:00:25.867251] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:15.877527] [00:00:26.117459] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:16.119199] [00:00:26.359110] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:16.170235] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:16.170235] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 42%
+[2017-Nov-08 15:07:16.363063] [00:00:26.602714] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:16.613741] [00:00:26.853375] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:16.800374] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:16.800374] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 43%
+[2017-Nov-08 15:07:16.851427] [00:00:27.091156] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:17.092599] [00:00:27.332533] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:17.340291] [00:00:27.580151] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:17.430354] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:17.430354] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 44%
+[2017-Nov-08 15:07:17.583964] [00:00:27.823953] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:17.824134] [00:00:28.063992] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:18.051825] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:18.051825] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 45%
+[2017-Nov-08 15:07:18.064834] [00:00:28.304355] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:18.306577] [00:00:28.546180] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:18.546248] [00:00:28.785759] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:18.674338] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:18.674338] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 46%
+[2017-Nov-08 15:07:18.785918] [00:00:29.025513] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:19.024123] [00:00:29.263867] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:19.274328] [00:00:29.514079] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:19.298346] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:19.298346] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 47%
+[2017-Nov-08 15:07:19.513498] [00:00:29.753370] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:19.756671] [00:00:29.996211] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:19.916834] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:19.916834] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 48%
+[2017-Nov-08 15:07:19.993389] [00:00:30.232970] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:20.231583] [00:00:30.471533] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:20.473774] [00:00:30.713282] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:20.534818] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:20.534818] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 49%
+[2017-Nov-08 15:07:20.713463] [00:00:30.953010] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:20.953615] [00:00:31.193428] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:21.152756] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:21.152756] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 50%
+[2017-Nov-08 15:07:21.191284] [00:00:31.431134] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:21.439460] [00:00:31.679382] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:21.683133] [00:00:31.923067] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:21.782718] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:21.782718] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 51%
+[2017-Nov-08 15:07:21.920316] [00:00:32.160005] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:22.157985] [00:00:32.397727] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:22.402659] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:22.402659] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 52%
+[2017-Nov-08 15:07:22.403659] [00:00:32.643464] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:22.659363] [00:00:32.899271] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:22.907040] [00:00:33.146966] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:23.044638] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:23.044638] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 53%
+[2017-Nov-08 15:07:23.145710] [00:00:33.385577] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:23.382423] [00:00:33.622066] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:23.621091] [00:00:33.860589] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:23.657618] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:23.657618] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 54%
+[2017-Nov-08 15:07:23.861275] [00:00:34.101133] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:24.100005] [00:00:34.339791] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:24.277131] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:24.277131] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 55%
+[2017-Nov-08 15:07:24.347181] [00:00:34.587052] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:24.593370] [00:00:34.833044] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:24.834055] [00:00:35.073982] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:24.906606] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:24.906606] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 56%
+[2017-Nov-08 15:07:25.070223] [00:00:35.310130] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:25.308892] [00:00:35.548611] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:25.521043] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:25.521043] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 57%
+[2017-Nov-08 15:07:25.548063] [00:00:35.787801] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:25.787232] [00:00:36.026934] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:26.027691] [00:00:36.267385] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:26.138748] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:26.138748] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 58%
+[2017-Nov-08 15:07:26.265337] [00:00:36.504887] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:26.502019] [00:00:36.741529] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:26.740689] [00:00:36.980316] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:26.751196] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:26.751196] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 59%
+[2017-Nov-08 15:07:26.979115] [00:00:37.218712] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:27.214782] [00:00:37.454504] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:27.362386] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:27.362386] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 60%
+[2017-Nov-08 15:07:27.453472] [00:00:37.693342] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:27.695195] [00:00:37.935041] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:27.935366] [00:00:38.174994] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:27.981916] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:27.982416] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 61%
+[2017-Nov-08 15:07:28.175090] [00:00:38.414916] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:28.413259] [00:00:38.652852] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:28.602394] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:28.602394] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 62%
+[2017-Nov-08 15:07:28.656432] [00:00:38.896363] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:28.895618] [00:00:39.135547] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:29.135300] [00:00:39.375075] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:29.219361] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:29.219361] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 63%
+[2017-Nov-08 15:07:29.373969] [00:00:39.613496] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:29.613140] [00:00:39.853016] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:29.837353] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:29.837353] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 64%
+[2017-Nov-08 15:07:29.853864] [00:00:40.093505] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:30.090615] [00:00:40.330432] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:30.330346] [00:00:40.570257] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:30.453933] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:30.453933] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 65%
+[2017-Nov-08 15:07:30.572017] [00:00:40.811666] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:30.811687] [00:00:41.051489] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:31.052858] [00:00:41.292410] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:31.074374] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:31.074374] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 66%
+[2017-Nov-08 15:07:31.291061] [00:00:41.530781] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:31.528808] [00:00:41.768456] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:31.687622] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:31.687622] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 67%
+[2017-Nov-08 15:07:31.766178] [00:00:42.005975] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:32.006376] [00:00:42.245992] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:32.244044] [00:00:42.483558] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:32.301585] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:32.301585] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 68%
+[2017-Nov-08 15:07:32.480213] [00:00:42.719975] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:32.719384] [00:00:42.959021] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:32.922527] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:32.922527] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 69%
+[2017-Nov-08 15:07:32.965057] [00:00:43.204734] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:33.207241] [00:00:43.446984] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:33.446912] [00:00:43.686423] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:33.543479] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:33.543479] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 70%
+[2017-Nov-08 15:07:33.686080] [00:00:43.925772] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:33.927752] [00:00:44.167455] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:34.169424] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:34.169424] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 71%
+[2017-Nov-08 15:07:34.173926] [00:00:44.413656] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:34.410106] [00:00:44.650057] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:34.647303] [00:00:44.886822] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:34.782898] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:34.782898] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 72%
+[2017-Nov-08 15:07:34.887472] [00:00:45.127432] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:35.125664] [00:00:45.365439] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:35.365345] [00:00:45.604878] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:35.397868] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:35.397868] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 73%
+[2017-Nov-08 15:07:35.603514] [00:00:45.843431] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:35.842686] [00:00:46.082551] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:36.014306] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:36.014306] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 74%
+[2017-Nov-08 15:07:36.082874] [00:00:46.322508] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:36.322525] [00:00:46.562171] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:36.562206] [00:00:46.801702] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:36.632256] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:36.632256] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 75%
+[2017-Nov-08 15:07:36.801376] [00:00:47.041053] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:37.039044] [00:00:47.278782] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:37.246192] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:37.246192] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 76%
+[2017-Nov-08 15:07:37.276714] [00:00:47.516456] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:37.514923] [00:00:47.754450] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:37.753616] [00:00:47.993116] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:37.860692] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:37.860692] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 77%
+[2017-Nov-08 15:07:37.992304] [00:00:48.232233] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:38.234988] [00:00:48.474628] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:38.474175] [00:00:48.714016] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:38.480679] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:38.481180] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 78%
+[2017-Nov-08 15:07:38.715347] [00:00:48.954958] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:38.961025] [00:00:49.200521] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:39.109131] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:39.109131] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 79%
+[2017-Nov-08 15:07:39.206200] [00:00:49.445762] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:39.444892] [00:00:49.684678] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:39.688602] [00:00:49.928189] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:39.733135] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:39.733135] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 80%
+[2017-Nov-08 15:07:39.931313] [00:00:50.170858] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:40.168982] [00:00:50.408693] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:40.351128] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:40.351128] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 81%
+[2017-Nov-08 15:07:40.409681] [00:00:50.649265] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:40.648851] [00:00:50.888459] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:40.888521] [00:00:51.128270] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:40.970579] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:40.970579] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 82%
+[2017-Nov-08 15:07:41.129192] [00:00:51.369026] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:41.368863] [00:00:51.608655] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:41.589019] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:41.589019] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 83%
+[2017-Nov-08 15:07:41.608533] [00:00:51.848224] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:41.849216] [00:00:52.088708] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:42.086895] [00:00:52.326697] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:42.204979] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:42.204979] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 84%
+[2017-Nov-08 15:07:42.325085] [00:00:52.564578] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:42.562794] [00:00:52.802724] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:42.804966] [00:00:53.044734] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:42.822478] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:42.822478] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 85%
+[2017-Nov-08 15:07:43.046663] [00:00:53.286511] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:43.286345] [00:00:53.525812] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:43.440973] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:43.440973] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 86%
+[2017-Nov-08 15:07:43.524014] [00:00:53.763662] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:43.764685] [00:00:54.004175] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:44.003855] [00:00:54.243619] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:44.058895] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:44.058895] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 87%
+[2017-Nov-08 15:07:44.245026] [00:00:54.484530] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:44.486197] [00:00:54.726129] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:44.686340] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:44.686340] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 88%
+[2017-Nov-08 15:07:44.732372] [00:00:54.972274] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:44.981562] [00:00:55.221265] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:45.220746] [00:00:55.460262] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:45.313812] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:45.313812] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 89%
+[2017-Nov-08 15:07:45.460918] [00:00:55.700377] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:45.702094] [00:00:55.941618] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:45.933758] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:45.934259] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 90%
+[2017-Nov-08 15:07:45.942264] [00:00:56.182200] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:46.181934] [00:00:56.421638] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:46.421118] [00:00:56.660740] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:46.550210] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:46.550210] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 91%
+[2017-Nov-08 15:07:46.658788] [00:00:56.898450] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:46.896740] [00:00:57.136520] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:47.133908] [00:00:57.373403] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:47.162929] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:47.162929] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 92%
+[2017-Nov-08 15:07:47.371077] [00:00:57.610822] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:47.609746] [00:00:57.849591] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:47.776364] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:47.776864] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 93%
+[2017-Nov-08 15:07:47.847914] [00:00:58.087689] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:48.085610] [00:00:58.325237] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:48.326781] [00:00:58.566658] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:48.392857] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:48.392857] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 94%
+[2017-Nov-08 15:07:48.566489] [00:00:58.806387] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:48.805159] [00:00:59.044675] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:49.013807] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:49.013807] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 95%
+[2017-Nov-08 15:07:49.048331] [00:00:59.287966] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:49.286000] [00:00:59.525864] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:49.523168] [00:00:59.762955] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:49.626242] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:49.626242] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 96%
+[2017-Nov-08 15:07:49.761353] [00:01:00.001174] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:50.000551] [00:01:00.240308] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:50.241222] [00:01:00.481083] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:50.244224] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:50.244224] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 97%
+[2017-Nov-08 15:07:50.478391] [00:01:00.717835] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:50.717572] [00:01:00.957153] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:50.857670] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:50.857670] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 98%
+[2017-Nov-08 15:07:50.955240] [00:01:01.194888] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:51.195410] [00:01:01.434872] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:51.436582] [00:01:01.676436] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:51.476610] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:51.476610] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)] -> MHSDK(1): File progress: 99%
+[2017-Nov-08 15:07:51.673776] [00:01:01.913387] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:51.914456] [00:01:02.154021] [FPTool] [Debug  ][Framework::ChannelBase::ProcessThread] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:52.096220] [               ] [FPTool] [Debug  ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)<-...] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:52.096220] [               ] [FPTool] [Info   ][void __cdecl Framework::MHSDKChannel::OnProgress(const struct Framework::ProgressEvent &)<-...] -> MHSDK(1): File progress: 100%
+[2017-Nov-08 15:07:52.109211] [               ] [FPTool] [Debug  ][Framework::MediaDecodingFrameworkPlugin::TrackEventCallback] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:52.139232] [               ] [FPTool] [Debug  ][Framework::MediaDecodingFrameworkPlugin::TrackEventCallback] -> [S] MHSDK ContentElement CallBack
+[2017-Nov-08 15:07:52.139232] [               ] [FPTool] [Debug  ][Framework::MediaDecodingFrameworkPlugin::TrackEventCallback] -> [S] MHSDK Event CallBack
+[2017-Nov-08 15:07:52.139232] [               ] [FPTool] [Info   ][Framework::MediaDecodingFrameworkPlugin::TrackEventCallback] -> MHSDK: File Completed event, app. 3600.06 seconds of the reported 3600.08 seconds content fingerprinted
+[2017-Nov-08 15:07:52.139232] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CMHSDKChannelHandler(Media.Channel.VIDEO_ALGO_V5_4_65S).Stop()
+[2017-Nov-08 15:07:52.139734] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] MHSDKStopSession
+[2017-Nov-08 15:07:52.158747] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CFingerprinterInput::~CFingerprinterInput()
+[2017-Nov-08 15:07:52.158747] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] CFingerprinterInput::Teardown()
+[2017-Nov-08 15:07:52.159247] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] MHSDKCloseSession
+[2017-Nov-08 15:07:52.162750] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] Deleted input
+[2017-Nov-08 15:07:52.188268] [               ] [FPTool] [Debug  ][int __cdecl CToolHandler::Run(int,char *[])] -> [S] Deleted output
+[2017-Nov-08 15:07:52.188268] [               ] [FPTool] [Debug  ][] -> [S] CEInput::Teardown()
+[2017-Nov-08 15:07:52.188268] [               ] [FPTool] [Debug  ][] -> [S] CECOInput::Teardown()
+[2017-Nov-08 15:07:52.188268] [               ] [FPTool] [Debug  ][] -> [S] CEInput::Teardown()
+[2017-Nov-08 15:07:52.188268] [               ] [FPTool] [Debug  ][] -> [S] CInfoOutput::Teardown()

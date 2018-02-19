@@ -10,10 +10,10 @@ class mydecorator(object):
             f(*args)
         return wrapper
 
-print("Thsi line is before annotation")
+print("Thsi line is before annotation >>>>>>>")
 @mydecorator("fun","begins","now")
 def aFunction(fname,lname):
-    print("Inside aFunction "+fname+"."+lname)
+    print("Inside aFunction >>>>> "+fname+"."+lname)
 
 print("First line to be executed")
 print(aFunction("Anurag","Mala"))
